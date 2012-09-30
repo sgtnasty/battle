@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle", "Battle\Battle.csproj", "{64485237-32E6-4C5E-B5C5-15F488070C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteLib", "BatteLib\BatteLib.csproj", "{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}.Debug|x86.Build.0 = Debug|Any CPU
+		{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}.Release|x86.ActiveCfg = Release|Any CPU
+		{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}.Release|x86.Build.0 = Release|Any CPU
+		{64485237-32E6-4C5E-B5C5-15F488070C47}.Debug|x86.ActiveCfg = Debug|x86
+		{64485237-32E6-4C5E-B5C5-15F488070C47}.Debug|x86.Build.0 = Debug|x86
+		{64485237-32E6-4C5E-B5C5-15F488070C47}.Release|x86.ActiveCfg = Release|x86
+		{64485237-32E6-4C5E-B5C5-15F488070C47}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Battle\Battle.csproj
+	EndGlobalSection
+EndGlobal
