@@ -46,4 +46,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
 </Project>

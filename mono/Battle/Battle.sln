@@ -5,6 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle", "Battle\Battle.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BatteLib", "BatteLib\BatteLib.csproj", "{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleGtk", "BattleGtk\BattleGtk.csproj", "{F3D719E9-C6BC-4FBE-B83B-61F4EF636280}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DCA04499-7E30-4F52-9EE9-E8EF24A83CB2}"
+	ProjectSection(SolutionItems) = preProject
+		BattleDocs.odt = BattleDocs.odt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +26,12 @@ Global
 		{64485237-32E6-4C5E-B5C5-15F488070C47}.Debug|x86.Build.0 = Debug|x86
 		{64485237-32E6-4C5E-B5C5-15F488070C47}.Release|x86.ActiveCfg = Release|x86
 		{64485237-32E6-4C5E-B5C5-15F488070C47}.Release|x86.Build.0 = Release|x86
+		{F3D719E9-C6BC-4FBE-B83B-61F4EF636280}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3D719E9-C6BC-4FBE-B83B-61F4EF636280}.Debug|x86.Build.0 = Debug|Any CPU
+		{F3D719E9-C6BC-4FBE-B83B-61F4EF636280}.Release|x86.ActiveCfg = Release|Any CPU
+		{F3D719E9-C6BC-4FBE-B83B-61F4EF636280}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Battle\Battle.csproj
