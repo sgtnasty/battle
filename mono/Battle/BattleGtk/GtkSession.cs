@@ -1,5 +1,5 @@
 //  
-//  MyClass.cs
+//  GtkSession.cs
 //  
 //  Author:
 //       Ronaldo Nascimento <ronaldo1@users.sf.net>
@@ -19,16 +19,29 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
-using Gtk;
 using BatteLib;
+using Gtk;
 
 namespace BattleGtk
 {
-    public class BattleWindow : Gtk.Window
+    public class GtkSession
     {
-        public BattleWindow () : base (WindowType.Toplevel)
+      
+        public void Start (ref string[] args)
         {
-            this.DeleteEvent += (o, args) => { Gtk.Application.Quit (); };
+            Gtk.Application.Init ("battle", ref args);
+            BattleWindow window = new BattleWindow ();
+            
+            window.SetDefaultSize (800, 600);
+            window.ShowAll ();
+            
+            Gtk.Application.Run ();
+            this.Stop ();
+        }
+        
+        public void Stop ()
+        {
+            Gtk.Application.Quit ();
         }
     }
 }

@@ -37,6 +37,13 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="BattleWindow.cs" />
+    <Compile Include="GtkSession.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\BatteLib\BatteLib.csproj">
+      <Project>{40DB32F5-26D9-40E8-A71C-BF303D9B76A5}</Project>
+      <Name>BatteLib</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

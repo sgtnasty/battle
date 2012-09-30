@@ -1,0 +1,6 @@
+2012-09-30  Ronaldo Nascimento  <ronaldo1@users.sf.net>
+
+	* GtkSession.cs:
+	* BattleWindow.cs:
+	* BattleGtk.csproj: added main window
+

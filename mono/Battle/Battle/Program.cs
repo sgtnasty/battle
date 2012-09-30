@@ -19,6 +19,8 @@
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 using System;
+using BatteLib;
+using BattleGtk;
 
 namespace Battle
 {
@@ -32,6 +34,8 @@ namespace Battle
         public static void Main (string[] args)
         {
             Program p = new Program ();
+            GtkSession session = new GtkSession ();
+            session.Start (ref args);
         }
     }
 }
