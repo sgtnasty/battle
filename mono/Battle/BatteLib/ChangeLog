@@ -1,0 +1,5 @@
+2012-09-30  Ronaldo Nascimento  <ronaldo1@users.sf.net>
+
+	* BatteLib.csproj:
+	* IBattleWindow.cs: implementing the interfaces
+

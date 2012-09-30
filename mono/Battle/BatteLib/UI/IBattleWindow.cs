@@ -1,5 +1,5 @@
 //  
-//  Program.cs
+//  IBattleWindow.cs
 //  
 //  Author:
 //       Ronaldo Nascimento <ronaldo1@users.sf.net>
@@ -21,16 +21,11 @@
 using System;
 using BatteLib;
 
-namespace Battle
+namespace BatteLib.UI
 {
-    public class Program
+    public interface IBattleWindow
     {
-        [STAThread]
-        public static void Main (string[] args)
-        {
-            BattleGtk.Launcher session = new BattleGtk.Launcher (new Session ());
-            session.Start (ref args);
-        }
+        Session GetSession ();
     }
 }
 

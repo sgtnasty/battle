@@ -1,5 +1,12 @@
 2012-09-30  Ronaldo Nascimento  <ronaldo1@users.sf.net>
 
+	* Launcher.cs:
+	* GtkSession.cs:
+	* BattleWindow.cs:
+	* BattleGtk.csproj: implementing the interfaces
+
+2012-09-30  Ronaldo Nascimento  <ronaldo1@users.sf.net>
+
 	* GtkSession.cs:
 	* BattleWindow.cs:
 	* BattleGtk.csproj: added main window

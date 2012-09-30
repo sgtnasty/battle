@@ -24,13 +24,21 @@ using Gtk;
 
 namespace BattleGtk
 {
-    public class GtkSession
+    /// <summary>
+    /// Launcher
+    /// </summary>
+    public class Launcher
     {
-      
+        public Launcher (Session session)
+        {
+            this.session = session;
+        }
+        private Session session;
+        
         public void Start (ref string[] args)
         {
             Gtk.Application.Init ("battle", ref args);
-            BattleWindow window = new BattleWindow ();
+            BattleWindow window = new BattleWindow (this.session);
             
             window.SetDefaultSize (800, 600);
             window.ShowAll ();
