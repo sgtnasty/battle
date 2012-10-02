@@ -30,6 +30,7 @@ namespace BattleGtk
         public BattleWindow (Session session) : base (WindowType.Toplevel)
         {
             this.session = session;
+            this.WindowPosition = Gtk.WindowPosition.Center;
             this.DeleteEvent += (o, args) => { Gtk.Application.Quit (); };
         }
         

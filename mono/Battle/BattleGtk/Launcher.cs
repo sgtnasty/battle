@@ -21,6 +21,7 @@
 using System;
 using BatteLib;
 using Gtk;
+using Glade;
 
 namespace BattleGtk
 {
