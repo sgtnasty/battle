@@ -50,4 +50,7 @@
       <Name>BatteLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="battle.ui" />
+  </ItemGroup>
 </Project>

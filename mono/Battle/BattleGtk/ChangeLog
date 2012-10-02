@@ -1,5 +1,10 @@
 2012-10-01  Ronaldo Nascimento  <ronaldo1@users.sf.net>
 
+	* BattleGtk.csproj: somehow battle.ui did not show up in
+	solution 
+
+2012-10-01  Ronaldo Nascimento  <ronaldo1@users.sf.net>
+
 	* Launcher.cs:
 	* BattleWindow.cs:
 	* BattleGtk.csproj: considering use of glade over stetic,
