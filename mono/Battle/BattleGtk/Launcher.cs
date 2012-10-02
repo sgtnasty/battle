@@ -45,7 +45,7 @@ namespace BattleGtk
             //window.ShowAll ();
             Glade.XML gxml = new Glade.XML ("battle.ui", "mainWindow", null);
             gxml.Autoconnect (window);
-
+            window.ShowAll ();
             Application.Run ();
             this.Stop ();
         }
