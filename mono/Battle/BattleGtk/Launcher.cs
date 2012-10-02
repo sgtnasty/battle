@@ -38,19 +38,21 @@ namespace BattleGtk
         
         public void Start (ref string[] args)
         {
-            Gtk.Application.Init ("battle", ref args);
+            Application.Init ("battle", ref args);
             BattleWindow window = new BattleWindow (this.session);
             
-            window.SetDefaultSize (800, 600);
-            window.ShowAll ();
-            
-            Gtk.Application.Run ();
+            //window.SetDefaultSize (800, 600);
+            //window.ShowAll ();
+            Glade.XML gxml = new Glade.XML ("battle.ui", "mainWindow", null);
+            gxml.Autoconnect (window);
+
+            Application.Run ();
             this.Stop ();
         }
         
         public void Stop ()
         {
-            Gtk.Application.Quit ();
+            Application.Quit ();
         }
     }
 }

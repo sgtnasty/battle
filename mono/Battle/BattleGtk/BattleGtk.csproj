@@ -51,6 +51,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="battle.ui" />
+    <Content Include="battle.ui">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
