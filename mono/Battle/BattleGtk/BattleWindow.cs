@@ -25,17 +25,21 @@ using BatteLib.UI;
 
 namespace BattleGtk
 {
-    public class BattleWindow : Gtk.Window, IBattleWindow
+    public class BattleWindow : IBattleWindow
     {
-        public BattleWindow (Session session) : base (WindowType.Toplevel)
+        public BattleWindow (Session session, Window win)
         {
             this.session = session;
-            this.WindowPosition = Gtk.WindowPosition.Center;
-            this.DeleteEvent += (o, args) => { Gtk.Application.Quit (); };
+            this.Window = win;
+            this.Window.WindowPosition = Gtk.WindowPosition.Center;
+            this.Window.DeleteEvent += (o, args) => { Gtk.Application.Quit (); };
         }
         
         private Session session;
-        
+        public Window Window {
+            private set;
+            get;
+        }
         
         #region IBattleWindow implementation
         public Session GetSession ()

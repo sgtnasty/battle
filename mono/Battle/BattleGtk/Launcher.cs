@@ -39,13 +39,12 @@ namespace BattleGtk
         public void Start (ref string[] args)
         {
             Application.Init ("battle", ref args);
-            BattleWindow window = new BattleWindow (this.session);
-            
-            //window.SetDefaultSize (800, 600);
-            //window.ShowAll ();
+
             Glade.XML gxml = new Glade.XML ("battle.ui", "mainWindow", null);
+            BattleWindow window = new BattleWindow (this.session, 
+                                                    (Window)gxml.GetWidget("mainWindow"));
             gxml.Autoconnect (window);
-            window.ShowAll ();
+            window.Window.ShowAll ();
             Application.Run ();
             this.Stop ();
         }

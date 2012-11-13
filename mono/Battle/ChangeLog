@@ -1,0 +1,4 @@
+2012-11-13  Ronaldo Nascimento  <ronaldo1@users.sf.net>
+
+	* Battle.sln: my custom window now works with the glade object
+
