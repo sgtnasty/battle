@@ -36,9 +36,15 @@ namespace BattleGtk
         }
         
         private Session session;
+        Window window;
+
         public Window Window {
-            private set;
-            get;
+            private set {
+                window = value;
+            }
+            get {
+                return window;
+            }
         }
         
         #region IBattleWindow implementation

@@ -41,10 +41,11 @@ namespace BattleGtk
             Application.Init ("battle", ref args);
 
             Glade.XML gxml = new Glade.XML ("battle.ui", "mainWindow", null);
-            BattleWindow window = new BattleWindow (this.session, 
+            BattleWindow battleWin = new BattleWindow (this.session, 
                                                     (Window)gxml.GetWidget("mainWindow"));
-            gxml.Autoconnect (window);
-            window.Window.ShowAll ();
+            gxml.Autoconnect (battleWin);
+            battleWin.Window.ShowAll ();
+            battleWin.Window.Maximize ();
             Application.Run ();
             this.Stop ();
         }

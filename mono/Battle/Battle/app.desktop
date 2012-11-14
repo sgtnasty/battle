@@ -4,3 +4,5 @@ Type=Application
 Name=Battle
 Exec=battle
 Terminal=false
+Categories=Game;StrategyGame;RolePlaying;
+Icon=BattleLogo.jpg
