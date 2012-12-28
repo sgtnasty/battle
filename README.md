@@ -1,4 +1,3 @@
-battle
-======
+# battle #
 
 A battle simulator.
