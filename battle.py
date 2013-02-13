@@ -24,6 +24,20 @@ import random, string, math
 class Handler():
 	def on_window1_delete_event(self, *args):
 		Gtk.main_quit(*args)
+	
+	def on_about_toolbutton_clicked(self, *args):
+		ad = Gtk.AboutDialog()
+		ad.set_program_name("Battle")
+		ad.set_version("0.0.1")
+		ad.set_copyright("(c) 2013 by Ronaldo Nascimento")
+		ad.set_comments("A battle simulator.")
+		ad.set_website("https://github.com/sgtnasty")
+		ad.set_website_label("Support")
+		ad.set_authors(["Ronaldo Nascimento"])
+		#ad.set_logo()
+		ad.set_license('Distributed under the GPL v3 license.\nhttp://www.gnu.org/licenses/gpl-3.0.html')
+		ad.run()
+		ad.destroy()
 
 def battle():
 	builder = Gtk.Builder()
