@@ -26,6 +26,24 @@ def rolld10():
 def rolld100():
 	return (random.randint(1,10)) * 10 + random.randint(1,10)
 	
+def Significance(value):
+	if (value < 16):
+		return "Feeble"
+	elif (value < 21):
+		return "Poor"
+	elif (value < 26):
+		return "Inferior"
+	elif (value < 36):
+		return "Average"
+	elif (value < 41):
+		return "Superior"
+	elif (value < 46):
+		return "Great"
+	elif (value < 51):
+		return "Magnificent"
+	else:
+		return "Heroic - A Daemon's Willpower!"
+	
 class Stats:
 	def __init__(self):
 		self.weaponskill = 0
@@ -37,33 +55,43 @@ class Stats:
 		self.perception = 0
 		self.willpower = 0
 		self.fellowship = 0
-
+		
 class PC:
 	def __init__(self):
 		self.stats = Stats()
 		self.homeworld = ''
+		self.hwbase = {}
+		self.careers = []
 	
 	def generateHomeworld(self):
 		x = rolld100()
 		if (x >= 1 and x <= 20):
 			self.homeworld = "Feral World"
+			self.hwbase = {'WS': 20, 'BS':20, 'S':25, 'T':25, 'Ag':20, 'Int':20, 'Per':20, 'WP':15, 'Fel':15 }
+			self.careers = ['Assasin', 'Guardsman', 'Imperial Psyker', 'Scum']
 		elif (x > 20 and x <= 45):
 			self.homeworld = "Hive World"
+			self.hwbase = {'WS': 20, 'BS':20, 'S':20, 'T':15, 'Ag':20, 'Int':20, 'Per':20, 'WP':20, 'Fel':25 }
+			self.careers = ['Arbitrator', 'Assasin', 'Cleric', 'Guardsman', 'Imperial Psyker', 'Scum', 'Tech-Priest']
 		elif (x > 45 and x <= 90):
 			self.homeworld = "Imperial World"
+			self.hwbase = {'WS': 20, 'BS':20, 'S':20, 'T':20, 'Ag':20, 'Int':20, 'Per':20, 'WP':20, 'Fel':20 }
+			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', 'Guardsman', 'Imperial Psyker', 'Scum', 'Tech-Priest']
 		else:
 			self.homeworld = "Void Born"
+			self.hwbase = {'WS': 20, 'BS':20, 'S':15, 'T':20, 'Ag':20, 'Int':20, 'Per':20, 'WP':25, 'Fel':20 }
+			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', 'Imperial Psyker', 'Scum', 'Tech-Priest']
 		
 	def generateStats(self):
-		self.stats.weaponskill = rolld10()+rolld10()+20
-		self.stats.ballisticskill = rolld10()+rolld10()+20
-		self.stats.strength = rolld10()+rolld10()+20
-		self.stats.toughness = rolld10()+rolld10()+20
-		self.stats.agility = rolld10()+rolld10()+20
-		self.stats.intelligence = rolld10()+rolld10()+20
-		self.stats.perception = rolld10()+rolld10()+20
-		self.stats.willpower = rolld10()+rolld10()+20
-		self.stats.fellowship = rolld10()+rolld10()+20
+		self.stats.weaponskill = rolld10() + rolld10() + self.hwbase['WS']
+		self.stats.ballisticskill = rolld10() + rolld10() + self.hwbase['BS']
+		self.stats.strength = rolld10() + rolld10() + self.hwbase['S']
+		self.stats.toughness = rolld10() + rolld10() + self.hwbase['T']
+		self.stats.agility = rolld10() + rolld10() + self.hwbase['Ag']
+		self.stats.intelligence = rolld10() + rolld10() + self.hwbase['Int']
+		self.stats.perception = rolld10() + rolld10() + self.hwbase['Per']
+		self.stats.willpower = rolld10() + rolld10() + self.hwbase['WP']
+		self.stats.fellowship = rolld10() + rolld10() + self.hwbase['Fel']
 	
 if __name__ == '__main__':
 	random.seed()
@@ -73,7 +101,7 @@ if __name__ == '__main__':
 	print(pc.homeworld)
 	print("STAGE 2: GENERATE CHARACTERISTICS")
 	pc.generateStats()
-	print("WS : %02d" % pc.stats.weaponskill)
+	print("WS : %02d    %s" % (pc.stats.weaponskill, Significance(pc.stats.weaponskill)))
 	print("BS : %02d" % pc.stats.ballisticskill)
 	print("S  : %02d" % pc.stats.strength)
 	print("T  : %02d" % pc.stats.toughness)
@@ -82,3 +110,5 @@ if __name__ == '__main__':
 	print("Per: %02d" % pc.stats.perception)
 	print("WP : %02d" % pc.stats.willpower)
 	print("Fel: %02d" % pc.stats.fellowship)
+	print('Available careers: ', end="")
+	print(pc.careers)
