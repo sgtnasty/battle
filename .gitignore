@@ -6,4 +6,6 @@ bin
 obj
 
 # mstest test results
-TestResults
+TestResults/battle.pyc
+/1
+/battle.pyc

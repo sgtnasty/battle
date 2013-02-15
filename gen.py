@@ -62,6 +62,7 @@ class PC:
 		self.homeworld = ''
 		self.hwbase = {}
 		self.careers = []
+		self.career = ''
 	
 	def generateHomeworld(self):
 		x = rolld100()
@@ -92,14 +93,73 @@ class PC:
 		self.stats.perception = rolld10() + rolld10() + self.hwbase['Per']
 		self.stats.willpower = rolld10() + rolld10() + self.hwbase['WP']
 		self.stats.fellowship = rolld10() + rolld10() + self.hwbase['Fel']
+		
+	def generateCareer(self):
+		x = rolld100()
+		if (self.homeworld == 'Feral World'):
+			if (x < 31):
+				self.career = self.careers[0]
+			elif (x<81):
+				self.career = self.careers[1]
+			elif (x<91):
+				self.career = self.careers[2]
+			else:
+				self.career = self.careers[3]
+		elif (self.homeworld == 'Hive World'):
+			if (x<18):
+				self.career = self.careers[0]
+			elif (x<21):
+				self.career = self.careers[1]
+			elif (x<26):
+				self.career = self.careers[2]
+			elif (x<36):
+				self.career = self.careers[3]
+			elif (x<41):
+				self.career = self.careers[4]
+			elif (x<90):
+				self.career = self.careers[5]
+			else:
+				self.career = self.careers[6]
+		elif (self.homeworld == 'Imperial World'):
+			if (x<13):
+				self.career = self.careers[0]
+			elif (x<26):
+				self.career = self.careers[1]
+			elif (x<39):
+				self.career = self.careers[2]
+			elif (x<53):
+				self.career = self.careers[3]
+			elif (x<66):
+				self.career = self.careers[4]
+			elif (x<80):
+				self.career = self.careers[5]
+			elif (x<91):
+				self.career = self.careers[6]
+			else:
+				self.career = self.careers[7]
+		elif (self.homeworld == 'Void Born'):
+			if (x<11):
+				self.career = self.careers[0]
+			elif (x<21):
+				self.career = self.careers[1]
+			elif (x<26):
+				self.career = self.careers[2]
+			elif (x<36):
+				self.career = self.careers[3]
+			elif (x<76):
+				self.career = self.careers[4]
+			elif (x<86):
+				self.career = self.careers[5]
+			else:
+				self.career = self.careers[6]
 	
 if __name__ == '__main__':
 	random.seed()
 	pc = PC()
-	print("STAGE 1: HOMEWORLD")
+	print("***** STAGE 1: HOMEWORLD")
 	pc.generateHomeworld()
 	print(pc.homeworld)
-	print("STAGE 2: GENERATE CHARACTERISTICS")
+	print("**** STAGE 2: GENERATE CHARACTERISTICS")
 	pc.generateStats()
 	print("WS : %02d    %s" % (pc.stats.weaponskill, Significance(pc.stats.weaponskill)))
 	print("BS : %02d" % pc.stats.ballisticskill)
@@ -110,5 +170,10 @@ if __name__ == '__main__':
 	print("Per: %02d" % pc.stats.perception)
 	print("WP : %02d" % pc.stats.willpower)
 	print("Fel: %02d" % pc.stats.fellowship)
-	print('Available careers: ', end="")
-	print(pc.careers)
+	#print('Available careers: ', end="")
+	#print(pc.careers)
+	print("***** STAGE 3: DETERMINE CAREER PATH")
+	pc.generateCareer()
+	print(pc.career)
+	
+	
