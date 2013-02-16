@@ -20,6 +20,15 @@
 
 import random
 
+def roll2d10(min_roll):
+	x = 0
+	y = 0
+	while (x < min_roll):
+		x = random.randint(1,10)
+	while (y < min_roll):
+		y = random.randint(1,10)
+	return (x + y)
+
 def rolld10():
 	return random.randint(1,10)
 	
@@ -63,6 +72,9 @@ class PC:
 		self.hwbase = {}
 		self.careers = []
 		self.career = ''
+		self.wounds = 0
+		self.fate = 0
+		
 	
 	def generateHomeworld(self):
 		x = rolld100()
@@ -83,16 +95,16 @@ class PC:
 			self.hwbase = {'WS': 20, 'BS':20, 'S':15, 'T':20, 'Ag':20, 'Int':20, 'Per':20, 'WP':25, 'Fel':20 }
 			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', 'Imperial Psyker', 'Scum', 'Tech-Priest']
 		
-	def generateStats(self):
-		self.stats.weaponskill = rolld10() + rolld10() + self.hwbase['WS']
-		self.stats.ballisticskill = rolld10() + rolld10() + self.hwbase['BS']
-		self.stats.strength = rolld10() + rolld10() + self.hwbase['S']
-		self.stats.toughness = rolld10() + rolld10() + self.hwbase['T']
-		self.stats.agility = rolld10() + rolld10() + self.hwbase['Ag']
-		self.stats.intelligence = rolld10() + rolld10() + self.hwbase['Int']
-		self.stats.perception = rolld10() + rolld10() + self.hwbase['Per']
-		self.stats.willpower = rolld10() + rolld10() + self.hwbase['WP']
-		self.stats.fellowship = rolld10() + rolld10() + self.hwbase['Fel']
+	def generateStats(self, min_roll = 1):
+		self.stats.weaponskill = roll2d10(min_roll) + self.hwbase['WS']
+		self.stats.ballisticskill = roll2d10(min_roll) + self.hwbase['BS']
+		self.stats.strength = roll2d10(min_roll) + self.hwbase['S']
+		self.stats.toughness = roll2d10(min_roll) + self.hwbase['T']
+		self.stats.agility = roll2d10(min_roll) + self.hwbase['Ag']
+		self.stats.intelligence = roll2d10(min_roll) + self.hwbase['Int']
+		self.stats.perception = roll2d10(min_roll) + self.hwbase['Per']
+		self.stats.willpower = roll2d10(min_roll) + self.hwbase['WP']
+		self.stats.fellowship = roll2d10(min_roll) + self.hwbase['Fel']
 		
 	def generateCareer(self):
 		x = rolld100()
@@ -152,6 +164,45 @@ class PC:
 				self.career = self.careers[5]
 			else:
 				self.career = self.careers[6]
+				
+	def generateWounds(self):
+		if (self.homeworld == 'Feral World'):
+			self.wounds = random.randint(1,5) + 9
+		elif (self.homeworld == 'Hive World'):
+			self.wounds = random.randint(1,5) + 8
+		elif (self.homeworld == 'Imperial World'):
+			self.wounds = random.randint(1,5) + 8
+		elif (self.homeworld == 'Void Born'):
+			self.wounds = random.randint(1,5) + 6
+
+	def generateFate(self):
+		x = rolld10()
+		if (self.homeworld == 'Feral World'):
+			if (x < 4):
+				self.fate = 1
+			else:
+				self.fate = 2
+		elif (self.homeworld == 'Hive World'):
+			if (x<4):
+				self.fate = 1
+			elif (x<9):
+				self.fate = 2
+			else:
+				self.fate = 3
+		elif (self.homeworld == 'Imperial World'):
+			if (x<4):
+				self.fate = 2
+			elif (x<9):
+				self.fate = 2
+			else:
+				self.fate = 3
+		elif (self.homeworld == 'Void Born'):
+			if (x<4):
+				self.fate = 2
+			elif (x<9):
+				self.fate = 3
+			else:
+				self.fate = 3
 	
 if __name__ == '__main__':
 	random.seed()
@@ -160,7 +211,7 @@ if __name__ == '__main__':
 	pc.generateHomeworld()
 	print(pc.homeworld)
 	print("**** STAGE 2: GENERATE CHARACTERISTICS")
-	pc.generateStats()
+	pc.generateStats(7)
 	print("WS : %02d    %s" % (pc.stats.weaponskill, Significance(pc.stats.weaponskill)))
 	print("BS : %02d    %s" % (pc.stats.ballisticskill, Significance(pc.stats.ballisticskill)))
 	print("S  : %02d    %s" % (pc.stats.strength, Significance(pc.stats.strength)))
@@ -175,5 +226,8 @@ if __name__ == '__main__':
 	print("***** STAGE 3: DETERMINE CAREER PATH")
 	pc.generateCareer()
 	print(pc.career)
-	
-	
+	print("***** STAGE 4: SPEND EXPERIENCE POINTS, BUY EQUIPMENT")
+	pc.generateWounds()
+	print("Wounds = %d" % pc.wounds)
+	pc.generateFate()
+	print("Fate = %d" % pc.fate)
