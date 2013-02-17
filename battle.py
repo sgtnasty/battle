@@ -103,8 +103,25 @@ class Handler():
 		else:
 			print('Invalid double buffer')
 
+def banner():
+	print("Dark Heresy random character generator.")
+	print("Copyright (c) 2013 by Ronaldo Nascimento")
+	print(
+		"""
+Dark Heresy collection is © Games Workshop Limited 2008-2012. Games Workshop
+, Warhammer 40,000, Warhammer 40,000 Role Play, Dark Heresy, the foregoing 
+marks' respective logos, Rogue Trader, Dark Heresy and all associated marks,
+logos, places, names, creatures, races and race insignia/devices/logos/
+symbols, vehicles, locations, weapons, units and unit insignia, characters, 
+products and illustrations from the Warhammer 40,000 universe and the Dark 
+Heresy game setting are either ®, TM and/or © Games Workshop Ltd 2000–2013, 
+variably registered in the UK and other countries around the world. This 
+edition published under license to Fantasy Flight Publishing Inc. All Rights
+Reserved to their respective owners.
+		""")
 
 def battle():
+	banner()
 	builder = Gtk.Builder()
 	builder.add_from_file(join(RESOURCES,"battle.glade"))
 	builder.connect_signals(Handler())

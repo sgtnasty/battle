@@ -35,7 +35,7 @@ def rolld10():
 def rolld100():
 	return (random.randint(1,10)) * 10 + random.randint(1,10)
 	
-def Significance(value):
+def significance(value):
 	if (value < 16):
 		return "Feeble"
 	elif (value < 21):
@@ -80,20 +80,27 @@ class PC:
 		x = rolld100()
 		if (x >= 1 and x <= 20):
 			self.homeworld = "Feral World"
-			self.hwbase = {'WS': 20, 'BS':20, 'S':25, 'T':25, 'Ag':20, 'Int':20, 'Per':20, 'WP':15, 'Fel':15 }
+			self.hwbase = {'WS': 20, 'BS':20, 'S':25, 'T':25, 'Ag':20, \
+				'Int':20, 'Per':20, 'WP':15, 'Fel':15 }
 			self.careers = ['Assasin', 'Guardsman', 'Imperial Psyker', 'Scum']
 		elif (x > 20 and x <= 45):
 			self.homeworld = "Hive World"
-			self.hwbase = {'WS': 20, 'BS':20, 'S':20, 'T':15, 'Ag':20, 'Int':20, 'Per':20, 'WP':20, 'Fel':25 }
-			self.careers = ['Arbitrator', 'Assasin', 'Cleric', 'Guardsman', 'Imperial Psyker', 'Scum', 'Tech-Priest']
+			self.hwbase = {'WS': 20, 'BS':20, 'S':20, 'T':15, 'Ag':20, \
+				'Int':20, 'Per':20, 'WP':20, 'Fel':25 }
+			self.careers = ['Arbitrator', 'Assasin', 'Cleric', 'Guardsman', \
+				'Imperial Psyker', 'Scum', 'Tech-Priest']
 		elif (x > 45 and x <= 90):
 			self.homeworld = "Imperial World"
-			self.hwbase = {'WS': 20, 'BS':20, 'S':20, 'T':20, 'Ag':20, 'Int':20, 'Per':20, 'WP':20, 'Fel':20 }
-			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', 'Guardsman', 'Imperial Psyker', 'Scum', 'Tech-Priest']
+			self.hwbase = {'WS': 20, 'BS':20, 'S':20, 'T':20, 'Ag':20, \
+				'Int':20, 'Per':20, 'WP':20, 'Fel':20 }
+			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', \
+				'Guardsman', 'Imperial Psyker', 'Scum', 'Tech-Priest']
 		else:
 			self.homeworld = "Void Born"
-			self.hwbase = {'WS': 20, 'BS':20, 'S':15, 'T':20, 'Ag':20, 'Int':20, 'Per':20, 'WP':25, 'Fel':20 }
-			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', 'Imperial Psyker', 'Scum', 'Tech-Priest']
+			self.hwbase = {'WS': 20, 'BS':20, 'S':15, 'T':20, 'Ag':20, \
+				'Int':20, 'Per':20, 'WP':25, 'Fel':20 }
+			self.careers = ['Adept', 'Arbitrator', 'Assasin', 'Cleric', \
+				'Imperial Psyker', 'Scum', 'Tech-Priest']
 		
 	def generateStats(self, min_roll = 1):
 		self.stats.weaponskill = roll2d10(min_roll) + self.hwbase['WS']
@@ -203,24 +210,52 @@ class PC:
 				self.fate = 3
 			else:
 				self.fate = 3
+
+def banner():
+	print("Dark Heresy random character generator.")
+	print("Copyright (c) 2013 by Ronaldo Nascimento")
+	print(
+		"""
+Dark Heresy collection is © Games Workshop Limited 2008-2012. Games Workshop
+, Warhammer 40,000, Warhammer 40,000 Role Play, Dark Heresy, the foregoing 
+marks' respective logos, Rogue Trader, Dark Heresy and all associated marks,
+logos, places, names, creatures, races and race insignia/devices/logos/
+symbols, vehicles, locations, weapons, units and unit insignia, characters, 
+products and illustrations from the Warhammer 40,000 universe and the Dark 
+Heresy game setting are either ®, TM and/or © Games Workshop Ltd 2000–2013, 
+variably registered in the UK and other countries around the world. This 
+edition published under license to Fantasy Flight Publishing Inc. All Rights
+Reserved to their respective owners.
+		""")
 	
 if __name__ == '__main__':
+	banner()
 	random.seed()
+	print("***** DARK HERESY")
 	pc = PC()
 	print("***** STAGE 1: HOMEWORLD")
 	pc.generateHomeworld()
 	print(pc.homeworld)
 	print("**** STAGE 2: GENERATE CHARACTERISTICS")
 	pc.generateStats(7)
-	print("WS : %02d    %s" % (pc.stats.weaponskill, Significance(pc.stats.weaponskill)))
-	print("BS : %02d    %s" % (pc.stats.ballisticskill, Significance(pc.stats.ballisticskill)))
-	print("S  : %02d    %s" % (pc.stats.strength, Significance(pc.stats.strength)))
-	print("T  : %02d    %s" % (pc.stats.toughness, Significance(pc.stats.toughness)))
-	print("Ag : %02d    %s" % (pc.stats.agility, Significance(pc.stats.agility)))
-	print("Int: %02d    %s" % (pc.stats.intelligence, Significance(pc.stats.intelligence)))
-	print("Per: %02d    %s" % (pc.stats.perception, Significance(pc.stats.perception)))
-	print("WP : %02d    %s" % (pc.stats.willpower, Significance(pc.stats.willpower)))
-	print("Fel: %02d    %s" % (pc.stats.fellowship, Significance(pc.stats.fellowship)))
+	print("WS : %02d    %s" % (pc.stats.weaponskill, \
+		significance(pc.stats.weaponskill)))
+	print("BS : %02d    %s" % (pc.stats.ballisticskill, \
+		significance(pc.stats.ballisticskill)))
+	print("S  : %02d    %s" % (pc.stats.strength, \
+		significance(pc.stats.strength)))
+	print("T  : %02d    %s" % (pc.stats.toughness, \
+		significance(pc.stats.toughness)))
+	print("Ag : %02d    %s" % (pc.stats.agility, \
+		significance(pc.stats.agility)))
+	print("Int: %02d    %s" % (pc.stats.intelligence, \
+		significance(pc.stats.intelligence)))
+	print("Per: %02d    %s" % (pc.stats.perception, \
+		significance(pc.stats.perception)))
+	print("WP : %02d    %s" % (pc.stats.willpower, \
+		significance(pc.stats.willpower)))
+	print("Fel: %02d    %s" % (pc.stats.fellowship, \
+		significance(pc.stats.fellowship)))
 	#print('Available careers: ', end="")
 	#print(pc.careers)
 	print("***** STAGE 3: DETERMINE CAREER PATH")
