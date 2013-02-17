@@ -228,64 +228,70 @@ def one_or_other_or(one, other, orther):
 		return orther
 
 class Career:
-	def __init__(self, name):
+	def __init__(self, pc):
 		self.skills = []
 		self.talents = []
 		self.traits = []
 		self.gear = []
 		self.rank = 1
-		self.title = name
-		if (name == 'Adept'):
+		self.title = pc.career
+		if (pc.career == 'Adept'):
 			self.skills = ['Speak Language (Low Gothic)', 'Literacy', one_or_other('Trade (Copyist)','Trade (Valet)'), 'Common Lore (Imperium)', 'Scholastic Lore (Legend)']
 			self.talents = [one_or_other('Melee Weapon Training (Primitive)', 'Pistol Training (SP)'), one_or_other('Light Sleeper', 'Resistance (Cold),'), one_or_other('Sprint', 'Unremarkable')]
 			self.gear = [one_or_other('Stub revolver and 6 bullets', 'staff'), 'Administratum robes (Common Quality Clothing)', one_or_other('auto-quill','writing kit'), one_or_other('chrono','hour glass'), one_or_other('data-slate','illuminated'),'tome', 'backpack']
 			self.traits = []
 			self.rank = 1
 			self.title = 'Rank 1: Archivist'
-		elif name =='Arbitrator':
+			self.skills.append('Drive (Ground Vehicle)')
+			self.skills.append('Common Lore (Administratum)')
+			self.talents.append('Sound Constitution')
+			pc.stats.intelligence = pc.stats.intelligence + 5
+		elif pc.career =='Arbitrator':
 			self.skills = ['Speak Language (Low Gothic)','Literacy', 'Common Lore (Adeptus Arbites)', 'CommonLore (Imperium)', 'Inquiry (Fel)']
 			self.talents = ['Basic Weapons Training (SP)', 'Melee Weapon Training (Primitive)', one_or_other('Quick Draw', 'Rapid Reload')]
 			self.gear = ['Shotgun and 12 shells', 'club', 'brass knuckles', 'knife', one_or_other_or('chain coat','flak vest', 'mesh vest'), 'uniform (Good Quality Clothing)', '3 doses of stimm', 'injector', 'Arbitrator ID', 'chrono', one_or_other('pack of lho-sticks','flask of amasec')]
 			self.traits = []
 			self.rank = 1
 			self.title = 'Rank 1: Trooper'
-		elif name =='Assasin':
+			pc.stats.ballisticskill = pc.stats.ballisticskill + 5
+			self.skills.append(
+		elif pc.career =='Assasin':
 			self.skills = ['Speak Language (Low Gothic)', 'Awareness', 'Dodge']
 			self.talents = ['Melee Weapon Training (Primitive)', one_or_other('Ambidextrous','Unremarkable'), one_or_other('Thrown Weapon Training', 'Pistol Training (Las)'), 'Basic Weapon Training (SP)', 'Pistol Training (SP)']
 			self.gear = [one_or_other_or('Shotgun and 12 shells','hunting rifle and 16 rounds','autogun and 1 clip'), 'sword', 'knife', one_or_other('compact las pistol and 1 charge pack','10 throwing knives'), '3 doses of stimm', 'charm (corpse hair)', 'black bodyglove (Common Quality Clothing)']
 			self.traits = []
 			self.rank = 1
 			self.title = 'Rank 1: Sell Steel'
-		elif name =='Cleric':
+		elif pc.career =='Cleric':
 			self.skills = ['Speak Language (Low Gothic)','Common Lore (Imperial Creed)', 'Literacy', one_or_other('Performer (Singer)','Trade (Copyist)'), one_or_other('Trade (Cook)','Trade (Valet)')]
 			self.talents = ['Melee Weapon Training (Primitive)','Pistol Training (SP)', one_or_other('Basic Weapon Training (Primitive)','Thrown Weapon Training (Primitive)')]
 			self.gear = [one_or_other('Hammer','sword'), one_or_other('stub revolver and 6 bullets','autopistol and 1 clip'), one_or_other('crossbow and 10 bolts','5 throwing knives'), one_or_other('chain coat','flak vest'), 'aquila necklace', 'Ecclesiarchy robes (Good Quality Clothing)', '4 candles', 'charm (skull)', 'backpack']
 			self.traits = []
 			self.rank = 1
 			self.title = 'Rank 1: Novice'
-		elif name =='Guardsman':
+		elif pc.career =='Guardsman':
 			self.skills = ['Speak Language (Low Gothic)', one_or_other('Drive (Ground Vehicle)','Swim')]
 			self.talents = ['Melee Weapon Training (Primitive)', one_or_other('Pistol Training (Primitive)','Pistol Training (Las)'), 'Basic Weapons Training (Las)', one_or_other('Basic Weapon Training (Primitive)','Basic Weapons Training (SP)')]
 			self.gear = [one_or_other_or('Sword','axe','hammer'), one_or_other('flintlock pistol and 12 shots','las pistol and 1 charge pack'), 'lasgun and 1 charge pack', one_or_other_or('bow and 10 arrows','musket and 12 shots','shotgun and 12 shells'), 'knife', 'guard flak armour', one_or_other('uniform or stealth gear','street clothes (Common Quality Clothing)'), '1 week corpse starch rations', one_or_other_or('mercenary licence','explosive collar (still attached)','Imperial Infantryman’s Uplifting Primer')]
 			self.traits = []
 			self.rank = 1
 			self.title = 'Rank 1: Conscript'
-		elif name =='Imperial Psyker':
+		elif pc.career =='Imperial Psyker':
 			self.skills = ['Speak Language (Low Gothic)', 'Psyniscience', 'Invocation', one_or_other('Trade (Merchant)','Trade (Soothsayer)'), 'Literacy']
 			self.talents = ['Melee Weapon Training (Primitive)', one_or_other('Pistol Weapon Training (SP)','Pistol Weapon Training (Las)'), 'Psy Rating 1']
 			self.gear = [one_or_other('Axe','sword'), 'staff', one_or_other('impact stub revolver and 3 bullets','compact las pistol and 1 charge pack'), 'knife (psykana mercy blade)', 'quilted vest', 'tatty robe (Poor Quality Clothing)', one_or_other_or('book of Imperial saints','or deck of cards','dice'), 'Psy-Focus', 'sanctioning brand']
 			self.traits = []
 			self.rank = 1
-			self.title = name
+			self.title = 'Sanctionite'
 			self.sanctioning()
-		elif name =='Scum':
+		elif pc.career =='Scum':
 			self.skills = ['Speak Language (Low Gothic)', 'Blather', one_or_other('Charm','Dodge'), 'Deceive', 'Awareness', 'Common Lore (Imperium)']
 			self.talents = [one_or_other('Ambidextrous','Unremarkable'), 'Melee Weapon Training (Primitive)', 'Pistol Training (SP)', 'Basic Weapon Training (SP)']
 			self.gear = [one_or_other('Autogun and 1 clip','shotgun and 12 shells'), 'autopistol and 1 clip', one_or_other('brass knuckles','club'), 'knife', one_or_other('quilted vest','beast furs'), one_or_other_or('street ware','Rags','dirty coveralls (Poor Quality Clothing)')]
 			self.traits = []
 			self.rank = 1
 			self.title = 'Dreg'
-		elif name =='Tech-Priest':
+		elif pc.career =='Tech-Priest':
 			self.skills = ['Speak Language (Low Gothic)', 'Tech-Use', 'Literacy', 'Secret Tongue (Tech)', one_or_other('Trade (Scrimshawer)','Trade (Copyist)')]
 			self.talents = ['Melee Weapon Training (Primitive)', 'Basic Weapon Training (Las)', 'Pistol Training (Las)', 'Electro Graft Use']
 			self.traits = ['Mechanicus Implants']
@@ -372,11 +378,16 @@ if __name__ == '__main__':
 	print("***** STAGE 3: DETERMINE CAREER PATH")
 	pc.generateCareer()
 	print(pc.career)
-	career = Career(pc.career)
+	career = Career(pc)
+	print('Skills ---------------------')
 	print(career.skills)
+	print('Talents --------------------')
 	print(career.talents)
+	print('Traits ---------------------')
 	print(career.traits)
+	print('Gear -----------------------')
 	print(career.gear)
+	print('Title ----------------------')
 	print(career.title)
 	print("***** STAGE 4: SPEND EXPERIENCE POINTS, BUY EQUIPMENT")
 	pc.generateWounds()
