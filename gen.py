@@ -211,6 +211,51 @@ class PC:
 			else:
 				self.fate = 3
 
+def one_or_other(one, other):
+	x = random.randint(0,1)
+	if (x == 0):
+		return one
+	else:
+		return other
+
+class Career:
+	def __init__(self, name):
+		self.skills = []
+		self.talents = []
+		self.gear = []
+		self.rank = 1
+		self.title = name
+		if (name == 'Adept'):
+			self.skills = ['Speak Language (Low Gothic)', 'Literacy', \
+						one_or_other('Trade (Copyist)','Trade (Valet)'), \
+						'Common Lore (Imperium)', \
+						'Scholastic Lore (Legend)']
+			self.talents = [one_or_other('Melee Weapon Training (Primitive)', \
+				'Pistol Training (SP)'), one_or_other('Light Sleeper', \
+				'Resistance (Cold),'), one_or_other('Sprint', 'Unremarkable')]
+			self.gear = [one_or_other('Stub revolver and 6 bullets', 'staff'),\
+				'Administratum robes (Common Quality Clothing)', \
+				one_or_other('auto-quill','writing kit'), \
+				one_or_other('chrono','hour glass'), \
+				one_or_other('data-slate','illuminated'),'tome', 'backpack']
+			self.rank = 1
+			self.title = 'Archivist'
+		elif name =='Arbitrator':
+			pass
+		elif name =='Assassin':
+			pass
+		elif name =='Cleric':
+			pass
+		elif name =='Guardsman':
+			pass
+		elif name =='Imperial Psyker':
+			pass
+		elif name =='Scum':
+			pass
+		elif name =='Tech-Priest':
+			pass
+
+
 def banner():
 	print("Dark Heresy random character generator.")
 	print("Copyright (c) 2013 by Ronaldo Nascimento")
@@ -261,6 +306,11 @@ if __name__ == '__main__':
 	print("***** STAGE 3: DETERMINE CAREER PATH")
 	pc.generateCareer()
 	print(pc.career)
+	career = Career(pc.career)
+	print(career.skills)
+	print(career.talents)
+	print(career.gear)
+	print(career.title)
 	print("***** STAGE 4: SPEND EXPERIENCE POINTS, BUY EQUIPMENT")
 	pc.generateWounds()
 	print("Wounds = %d" % pc.wounds)
