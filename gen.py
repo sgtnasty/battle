@@ -344,7 +344,27 @@ variably registered in the UK and other countries around the world. This
 edition published under license to Fantasy Flight Publishing Inc. All Rights
 Reserved to their respective owners.
 		""")
-	
+
+def print_stats(stats):
+	print("WS : %02d    %s" % (stats.weaponskill, \
+		significance(stats.weaponskill)))
+	print("BS : %02d    %s" % (pc.stats.ballisticskill, \
+		significance(stats.ballisticskill)))
+	print("S  : %02d    %s" % (stats.strength, \
+		significance(stats.strength)))
+	print("T  : %02d    %s" % (stats.toughness, \
+		significance(stats.toughness)))
+	print("Ag : %02d    %s" % (stats.agility, \
+		significance(stats.agility)))
+	print("Int: %02d    %s" % (stats.intelligence, \
+		significance(stats.intelligence)))
+	print("Per: %02d    %s" % (stats.perception, \
+		significance(stats.perception)))
+	print("WP : %02d    %s" % (stats.willpower, \
+		significance(stats.willpower)))
+	print("Fel: %02d    %s" % (stats.fellowship, \
+		significance(stats.fellowship)))
+
 if __name__ == '__main__':
 	banner()
 	random.seed()
@@ -355,24 +375,7 @@ if __name__ == '__main__':
 	print(pc.homeworld)
 	print("**** STAGE 2: GENERATE CHARACTERISTICS")
 	pc.generateStats(2)
-	print("WS : %02d    %s" % (pc.stats.weaponskill, \
-		significance(pc.stats.weaponskill)))
-	print("BS : %02d    %s" % (pc.stats.ballisticskill, \
-		significance(pc.stats.ballisticskill)))
-	print("S  : %02d    %s" % (pc.stats.strength, \
-		significance(pc.stats.strength)))
-	print("T  : %02d    %s" % (pc.stats.toughness, \
-		significance(pc.stats.toughness)))
-	print("Ag : %02d    %s" % (pc.stats.agility, \
-		significance(pc.stats.agility)))
-	print("Int: %02d    %s" % (pc.stats.intelligence, \
-		significance(pc.stats.intelligence)))
-	print("Per: %02d    %s" % (pc.stats.perception, \
-		significance(pc.stats.perception)))
-	print("WP : %02d    %s" % (pc.stats.willpower, \
-		significance(pc.stats.willpower)))
-	print("Fel: %02d    %s" % (pc.stats.fellowship, \
-		significance(pc.stats.fellowship)))
+	print_stats(pc.stats)
 	#print('Available careers: ', end="")
 	#print(pc.careers)
 	print("***** STAGE 3: DETERMINE CAREER PATH")
