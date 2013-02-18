@@ -254,7 +254,7 @@ class Career:
 			self.rank = 1
 			self.title = 'Rank 1: Trooper'
 			pc.stats.ballisticskill = pc.stats.ballisticskill + 5
-			self.skills.append(
+			#self.skills.append(
 		elif pc.career =='Assasin':
 			self.skills = ['Speak Language (Low Gothic)', 'Awareness', 'Dodge']
 			self.talents = ['Melee Weapon Training (Primitive)', one_or_other('Ambidextrous','Unremarkable'), one_or_other('Thrown Weapon Training', 'Pistol Training (Las)'), 'Basic Weapon Training (SP)', 'Pistol Training (SP)']
@@ -354,7 +354,7 @@ if __name__ == '__main__':
 	pc.generateHomeworld()
 	print(pc.homeworld)
 	print("**** STAGE 2: GENERATE CHARACTERISTICS")
-	pc.generateStats(7)
+	pc.generateStats(2)
 	print("WS : %02d    %s" % (pc.stats.weaponskill, \
 		significance(pc.stats.weaponskill)))
 	print("BS : %02d    %s" % (pc.stats.ballisticskill, \
