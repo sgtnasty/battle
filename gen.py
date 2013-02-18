@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 	Random character generation.
@@ -345,25 +345,19 @@ edition published under license to Fantasy Flight Publishing Inc. All Rights
 Reserved to their respective owners.
 		""")
 
+def print_stat(statname, statvalue):
+	print("%3s : %02d    %s" % (statname, statvalue, significance(statvalue)))
+
 def print_stats(stats):
-	print("WS : %02d    %s" % (stats.weaponskill, \
-		significance(stats.weaponskill)))
-	print("BS : %02d    %s" % (pc.stats.ballisticskill, \
-		significance(stats.ballisticskill)))
-	print("S  : %02d    %s" % (stats.strength, \
-		significance(stats.strength)))
-	print("T  : %02d    %s" % (stats.toughness, \
-		significance(stats.toughness)))
-	print("Ag : %02d    %s" % (stats.agility, \
-		significance(stats.agility)))
-	print("Int: %02d    %s" % (stats.intelligence, \
-		significance(stats.intelligence)))
-	print("Per: %02d    %s" % (stats.perception, \
-		significance(stats.perception)))
-	print("WP : %02d    %s" % (stats.willpower, \
-		significance(stats.willpower)))
-	print("Fel: %02d    %s" % (stats.fellowship, \
-		significance(stats.fellowship)))
+	print_stat("WS", stats.weaponskill)
+	print_stat("BS", stats.ballisticskill)
+	print_stat("S", stats.strength)
+	print_stat("T", stats.toughness)
+	print_stat("Ag", stats.agility)
+	print_stat("Int", stats.intelligence)
+	print_stat("Per", stats.perception)
+	print_stat("WP", stats.willpower)
+	print_stat("Fel", stats.fellowship)
 
 if __name__ == '__main__':
 	banner()
