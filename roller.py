@@ -77,12 +77,16 @@ def roll(die):
 	if (x>maxroll):
 		maxroll = x
 	avg = total / rollsmade
-	statusbar1.push(0, 'min=%d, avg=%.2f, max=%d' % (minroll, avg, maxroll))
+	statusbar1.push(0, 'Results for %d roll(s): min=%d, avg=%.2f, max=%d' % (rollsmade, minroll, avg, maxroll))
 	add_result(die, x)
 
 def add_result(die, result):
 	global total
+	iter = textbuffer.get_end_iter()
+	textbuffer.place_cursor(iter)
 	textbuffer.insert_at_cursor('1d%s= %d for a total of %d\n' % (die, result, total))
+	iter = textbuffer.get_end_iter()
+	textview1.scroll_to_iter(iter, 0.0, False, 0, 0)
 
 if __name__ == '__main__':
 	builder = Gtk.Builder()
