@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-	A die roller.
+    A die roller.
     Copyright (C) 2013  Ronaldo Nascimento <ronaldo1@users.sf.net>
 
     This program is free software: you can redistribute it and/or modify
@@ -51,6 +51,8 @@ class Handler():
 
     def on_cleartoolbutton_clicked(self, *args):
         textbuffer.set_text('')
+        statusbar1.push(0, 'Cleared, average reset')
+        print("test")
 
 def add_result(die, result):
     textbuffer.insert_at_cursor('%s= %d\n' % (die, result))
@@ -62,16 +64,16 @@ if __name__ == '__main__':
     window = builder.get_object("window1")
     textview1 = builder.get_object("textview1")
     textbuffer = textview1.get_buffer()
-
+    # treeview interface
     treeview1 = builder.get_object("treeview1")
     tvcolumn1 = Gtk.TreeViewColumn('History')
     treeview1.append_column(tvcolumn1)
     cell_renderer = Gtk.CellRendererText()
     tvcolumn1.pack_start(cell_renderer, True)
     tvcolumn1.add_attribute(cell_renderer, 'text', 0)
-
     store = Gtk.ListStore(str)
     treeview1.set_model(store)
-
+    #status bar interface
+    statusbar1 = builder.get_object("statusbar1")
     window.show_all()
     Gtk.main()
