@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkAdjustment" id="adjustment1">
+    <property name="lower">1</property>
+    <property name="upper">100</property>
+    <property name="value">1</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <object class="GtkWindow" id="window1">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Roller</property>
@@ -27,7 +34,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d4</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d4</property>
+                    <property name="label" translatable="yes">d4</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d4toolbutton_clicked" swapped="no"/>
                   </object>
@@ -43,7 +50,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d6</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d6</property>
+                    <property name="label" translatable="yes">d6</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d6toolbutton_clicked" swapped="no"/>
                   </object>
@@ -59,7 +66,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d8</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d8</property>
+                    <property name="label" translatable="yes">d8</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d8toolbutton_clicked" swapped="no"/>
                   </object>
@@ -75,7 +82,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d10</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d10</property>
+                    <property name="label" translatable="yes">d10</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d10toolbutton_clicked" swapped="no"/>
                   </object>
@@ -91,7 +98,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d12</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d12</property>
+                    <property name="label" translatable="yes">d12</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d12toolbutton_clicked" swapped="no"/>
                   </object>
@@ -107,7 +114,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d20</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d20</property>
+                    <property name="label" translatable="yes">d20</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d20toolbutton_clicked" swapped="no"/>
                   </object>
@@ -123,7 +130,7 @@
                     <property name="can_focus">False</property>
                     <property name="tooltip_text" translatable="yes">Roll 1d100</property>
                     <property name="use_action_appearance">False</property>
-                    <property name="label" translatable="yes">1d100</property>
+                    <property name="label" translatable="yes">d100</property>
                     <property name="use_underline">True</property>
                     <signal name="clicked" handler="on_d100toolbutton_clicked" swapped="no"/>
                   </object>
@@ -171,6 +178,61 @@
           </packing>
         </child>
         <child>
+          <object class="GtkExpander" id="expander1">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <child>
+              <object class="GtkBox" id="box3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="label2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="label" translatable="yes">Number of dice:</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkSpinButton" id="spinbutton1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="invisible_char">●</property>
+                    <property name="progress_fraction">1</property>
+                    <property name="progress_pulse_step">1</property>
+                    <property name="adjustment">adjustment1</property>
+                    <property name="numeric">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+            </child>
+            <child type="label">
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">expander</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
           <object class="GtkPaned" id="paned1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -211,7 +273,7 @@
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">2</property>
           </packing>
         </child>
         <child>
@@ -224,7 +286,8 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
-            <property name="position">2</property>
+            <property name="pack_type">end</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
