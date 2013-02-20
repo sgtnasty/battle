@@ -37,25 +37,32 @@ class Handler():
 		Gtk.main_quit(*args)
 
 	def on_d4toolbutton_clicked(self, *args):
-		roll(4)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(4)
 
 	def on_d6toolbutton_clicked(self, *args):
-		roll(6)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(6)
 
 	def on_d8toolbutton_clicked(self, *args):
-		roll(8)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(8)
 
 	def on_d10toolbutton_clicked(self, *args):
-		roll(10)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(10)
 
 	def on_d12toolbutton_clicked(self, *args):
-		roll(12)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(12)
 
 	def on_d20toolbutton_clicked(self, *args):
-		roll(20)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(20)
 
 	def on_d100toolbutton_clicked(self, *args):
-		roll(100)
+		for i in range(spinbutton1.get_value_as_int()):
+			roll(100)
 
 	def on_cleartoolbutton_clicked(self, *args):
 		global total, avg, minroll, maxroll, rollsmade
@@ -104,6 +111,8 @@ if __name__ == '__main__':
 	tvcolumn1.add_attribute(cell_renderer, 'text', 0)
 	store = Gtk.ListStore(str)
 	treeview1.set_model(store)
+	# spin button
+	spinbutton1 = builder.get_object("spinbutton1")
 	#status bar interface
 	statusbar1 = builder.get_object("statusbar1")
 	window.show_all()
