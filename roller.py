@@ -20,6 +20,11 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+__author__ = "Ronaldo Nascimento <ronaldo1@users.sf.net>"
+__version__ = "0.1"
+__copyright_ = "Copyright (c) 2013 by Ronaldo Nascimento"
+__license__ = "GPL"
+
 from gi.repository import Gtk, Gdk, GObject
 from os.path import abspath, dirname, join
 import random, string, math, cairo
