@@ -73,6 +73,19 @@ class Handler():
 		minroll = 9999999
 		maxroll = 0
 		rollsmade = 0
+		
+	def on_abouttoolbutton_clicked(self, *args):
+		aboutdlg = Gtk.AboutDialog()
+		aboutdlg.set_program_name("Roller")
+		aboutdlg.set_version("0.1")
+		aboutdlg.set_copyright("Ronaldo Nascimento")
+		aboutdlg.set_comments("A die rolling utility")
+		aboutdlg.set_license("GNU GENERAL PUBLIC LICENSE v3 http://www.gnu.org/licenses/gpl-3.0.txt")
+		aboutdlg.set_website("http://github.com/sgtnasty/battle")
+		aboutdlg.set_authors(["Ronaldo Nascimento <ronaldo1@users.sf.net>"])
+		aboutdlg.set_artists(["Ronaldo Nascimento <ronaldo1@users.sf.net>"])
+		aboutdlg.run()
+		aboutdlg.destroy()
 	
 def roll(die):
 	global total, avg, minroll, maxroll, rollsmade
