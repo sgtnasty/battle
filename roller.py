@@ -22,8 +22,8 @@
 
 __author__ = "Ronaldo Nascimento <ronaldo1@users.sf.net>"
 __version__ = "0.1"
-__copyright_ = "Copyright (c) 2013 by Ronaldo Nascimento"
-__license__ = "GPL"
+__copyright__ = "Copyright (c) 2013 by Ronaldo Nascimento"
+__license__ = "GNU GENERAL PUBLIC LICENSE v3 http://www.gnu.org/licenses/gpl-3.0.txt"
 
 from gi.repository import Gtk, Gdk, GObject
 from os.path import abspath, dirname, join
@@ -111,15 +111,21 @@ class Handler():
     def on_abouttoolbutton_clicked(self, *args):
         aboutdlg = Gtk.AboutDialog()
         aboutdlg.set_program_name("Roller")
-        aboutdlg.set_version("0.1")
-        aboutdlg.set_copyright("Ronaldo Nascimento")
+        aboutdlg.set_version(__version__)
+        aboutdlg.set_copyright(__copyright__)
         aboutdlg.set_comments("A die rolling utility")
-        aboutdlg.set_license("GNU GENERAL PUBLIC LICENSE v3 http://www.gnu.org/licenses/gpl-3.0.txt")
+        aboutdlg.set_license(__copyright__)
         aboutdlg.set_website("http://github.com/sgtnasty/battle")
-        aboutdlg.set_authors(["Ronaldo Nascimento <ronaldo1@users.sf.net>"])
-        aboutdlg.set_artists(["Ronaldo Nascimento <ronaldo1@users.sf.net>"])
+        aboutdlg.set_authors([__author__])
         aboutdlg.run()
         aboutdlg.destroy()
+
+    def on_treeview_selection1_changed(self, *args):
+        sel = treeview1.get_selection()
+        model, iter = sel.get_selected()
+        if iter:
+            v = model.get_value(iter, 0)
+            print(str(v))
     
 def roll(die):
     global current_session
@@ -153,7 +159,6 @@ if __name__ == '__main__':
     cell_renderer1 = Gtk.CellRendererText()
     tvcolumn1.pack_start(cell_renderer1, True)
     tvcolumn1.add_attribute(cell_renderer1, 'text', 1)
-    #store = Gtk.ListStore(str)
     store = Gtk.ListStore(GObject.TYPE_PYOBJECT, str)
     treeview1.set_model(store)
     # spin button
