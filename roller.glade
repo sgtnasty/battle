@@ -197,6 +197,7 @@
           <object class="GtkExpander" id="expander1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
+            <property name="expanded">True</property>
             <child>
               <object class="GtkBox" id="box3">
                 <property name="visible">True</property>
@@ -252,7 +253,7 @@
           <object class="GtkPaned" id="paned1">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
-            <property name="position">100</property>
+            <property name="position">200</property>
             <property name="position_set">True</property>
             <child>
               <object class="GtkTreeView" id="treeview1">
