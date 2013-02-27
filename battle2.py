@@ -31,14 +31,17 @@ class Entity(object):
         self.defence = 5
         self.hits = 0
         self.speed = 5
-    def attack(self, target):
+        
+    def attack_target(self, target):
         result = roll() + self.attack - target.defend()
         if (result > 0):
             print("HIT!")
         else:
             print("MISS!")
+            
     def defend(self):
-        return roll() + self.defend
+        return (roll() + self.defence)
+    
     def __repr__(self):
         return '\"%s\".{atk: %d, def: %d}' % (self.name, self.attack, self.defence)
 
@@ -52,5 +55,5 @@ if __name__ == '__main__':
     blue.attack = 4
     blue.defence = 6
     print(blue)
-    red.attack(blue)
-    blue.attack(red)
+    red.attack_target(blue)
+    blue.attack_target(red)
