@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<battle>
+  <character-definition>
+    <attributes>
+      <attribute name="Agility" type="Physical" abbreviation="AGL"></attribute>
+      <attribute name="Endurance" type="Physical" abbreviation="END"></attribute>
+      <attribute name="Manual Dexterity" type="Physical" abbreviation="DEX"></attribute>
+      <attribute name="Strength" type="Physical" abbreviation="STR"></attribute>
+      <attribute name="Charisma" type="Physical" abbreviation="CHA"></attribute>
+      <attribute name="Intelligence" type="Physical" abbreviation="INT"></attribute>
+      <attribute name="Willpower" type="Physical" abbreviation="WIL"></attribute>
+      <attribute name="Perception" type="Physical" abbreviation="PER"></attribute>
+    </attributes>
+    <skills>
+      <skill name="Acrobatics" type="simple" governor="AGL"></skill>
+      <skill name="Athletics" type="simple" governor="STR"></skill>
+      <skill name="Diplomacy" type="simple" governor="CHA"></skill>
+      <skill name="Stealth" type="simple" governor="AGL"></skill>
+      <skill name="Weapons" type="complex" governor="DEX"></skill>
+      <skill name="Vehicles" type="complex" governor="AGL"></skill>
+      <skill name="Knowledge" type="complex" governor="INT"></skill>
+      <skill name="Technology" type="complex" governor="INT"></skill>
+      <skill name="Survival" type="simple" governor="END"></skill>
+      <skill name="Leadership" type="simple" governor="CHA"></skill>
+    </skills>
+  </character-definition>
+</battle>

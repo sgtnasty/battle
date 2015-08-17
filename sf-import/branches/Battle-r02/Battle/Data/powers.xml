@@ -1,0 +1,27 @@
+<battle>
+
+	<powers>
+	
+		<power name="Cast Magic" description="">
+			<provides value="spell casting"/>
+			<requires value="arcane base"/>
+		</power>
+		
+		<power name="Generate Psionics" description="">
+			<provides value="psionic generation" />
+			<requires value="psionic base"/>
+		</power>
+
+		<power name="Power Attack" description="">
+			<provides value="power attack" />
+			<requires value="martial base"/>
+		</power>
+
+		<power name="Inner Strength" description="">
+			<provides value="power defense"/>
+			<requires value="primal base"/>
+		</power>
+		
+	</powers>
+
+</battle>

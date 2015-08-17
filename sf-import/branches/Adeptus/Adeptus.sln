@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adeptus", "Adeptus\Adeptus.csproj", "{695AFA70-0A7B-4807-ABB4-F80823692848}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{695AFA70-0A7B-4807-ABB4-F80823692848}.Debug|x86.ActiveCfg = Debug|x86
+		{695AFA70-0A7B-4807-ABB4-F80823692848}.Debug|x86.Build.0 = Debug|x86
+		{695AFA70-0A7B-4807-ABB4-F80823692848}.Release|x86.ActiveCfg = Release|x86
+		{695AFA70-0A7B-4807-ABB4-F80823692848}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Adeptus\Adeptus.csproj
+		Policies = $0
+		$0.StandardHeader = $1
+		$1.inheritsSet = LGPLv3License
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+		$0.ChangeLogPolicy = $3
+		$3.UpdateMode = ProjectRoot
+		$3.VcsIntegration = RequireEntry
+		$3.MessageStyle = $4
+		$4.LineAlign = 0
+		$3.inheritsSet = Mono
+		$0.DotNetNamingPolicy = $5
+		$5.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$5.ResourceNamePolicy = FileFormatDefault
+	EndGlobalSection
+EndGlobal

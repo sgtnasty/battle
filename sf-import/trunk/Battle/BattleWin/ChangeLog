@@ -1,0 +1,14 @@
+2011-09-06  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Properties:
+	* BattleGui.cs:
+	* BattleForm.cs:
+	* BattleForm.resx:
+	* BattleWin.csproj:
+	* BattleForm.Designer.cs:
+	* Properties/Resources.resx:
+	* Properties/AssemblyInfo.cs:
+	* Properties/Settings.settings:
+	* Properties/Settings.Designer.cs:
+	* Properties/Resources.Designer.cs: added windows version
+

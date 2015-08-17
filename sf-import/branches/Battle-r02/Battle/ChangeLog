@@ -1,0 +1,81 @@
+2010-08-17  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* AssemblyInfo.cs: updating assembly info
+
+2010-08-17  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Gui/OriginView.cs: changed entries from sensitive to
+	editable
+
+	* Program.cs: added about dialog, all sources show inventory
+	counts in second column
+
+2010-08-17  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Program.cs:
+	* Data/Storage.cs:
+	* Gui/OriginView.cs: origin view now properly works
+
+2010-08-17  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Gui: origin view
+
+	* Program.cs:
+	* Battle.csproj:
+	* Gui/OriginView.cs:
+	* Core/BattleSession.cs: added origin view
+
+	* Data/Storage.cs:
+	* Data/origins.xml:
+	* Core/BattleEntity.cs: renamed some overriden methods from
+	refactoring from IProvider
+
+2010-08-17  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Battle.csproj:
+	* AssemblyInfo.cs: added assembly file
+
+	* Program.cs:
+	* Data/Storage.cs:
+	* Core/IProvider.cs:
+	* Core/PowerSource.cs:
+	* Core/BattleEntity.cs:
+	* Data/powersources.xml:
+	* Core/SkillDefinition.cs:
+	* Core/PowerDefinition.cs:
+	* Core/OriginDefinition.cs:
+	* Core/SpeciesDefinition.cs:
+	* Core/AbilityDefinition.cs:
+	* Core/ModifierDefinition.cs: moving the IProvider interface
+	to the entity abstract class
+
+	* docs/engine.txt: docs for the game engine
+
+2010-08-16  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* battle.glade: remvoed the table view from the viewport
+
+2010-08-16  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Data/species.xml: made better modifiers for species
+
+	* Program.cs: handling tree store selection
+
+2010-08-16  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Battle.csproj:
+	* Data/Storage.cs:
+	* Data/powers.xml:
+	* Core/PowerSource.cs:
+	* Core/BattleEntity.cs:
+	* Core/BattleSession.cs:
+	* Data/powersources.xml:
+	* Core/PowerDefinition.cs: added powersource and power
+	entities
+
+	* Data/skills.xml: added pilot, aimed combat and more
+	descriptions
+
+	* Program.cs: added powersource and power entities, and new
+	items in the treeview (characters and adventures)
+

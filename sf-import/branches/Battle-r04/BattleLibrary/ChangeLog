@@ -1,0 +1,10 @@
+2011-07-24  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* BattleLibrary.csproj: trying to figure out how to do taskbar
+
+2011-06-04  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* BattleRules.xml:
+	* BattleLibrary.csproj: added BattleLibrary, Session and rules
+	xml
+

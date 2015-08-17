@@ -1,0 +1,39 @@
+<!--
+ 
+ races.xml
+ 
+ Author:
+      Ronaldo Nascimento <ronaldo1@sourceforge.net>
+
+ Copyright (c) 2010 Ronaldo Nascimento
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<battlelords>
+	<races>
+		<race name="Chatilian"/>
+		<race name="Cizerak"/>
+		<race name="Eridani"/>
+		<race name="Gen-Human"/>
+		<race name="Human"/>
+		<race name="Mazian"/>
+		<race name="Mutzachan"/>
+		<race name="Orion Rogue"/>
+		<race name="Phentari"/>
+		<race name="Python Lizard"/>
+		<race name="Ram Python"/>
+		<race name="Zen Rigeln"/>
+		<race name="Tza Zen Rigeln"/>
+	</races>
+</battlelords>

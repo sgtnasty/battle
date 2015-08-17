@@ -1,0 +1,37 @@
+<battle>
+
+	<speciess>
+			<species name="Human" description="Homo-sapien" >
+				<origin name="Terra"/>
+				<provides value="sentience"/>
+				<modifier name="Resourcefulness" description="" value="1.0" target="LOGIC" type="ABILITY" />
+			</species>
+			<species name="Cephalopod" description="Sentient octopuses." >
+				<origin name="Alpha Centauri"/>
+				<provides value="sentience"/>
+				<modifier name="Enhanced Brain" description="" value="1.0" target="WILLPOWER" type="ABILITY" />
+			</species>
+			<species name="Ursoid" description="Sentient upright bears." >
+				<origin name="Gamma Cephei"/>
+				<provides value="sentience"/>
+				<modifier name="Large Size" description="" value="1.0" target="STRENGTH" type="ABILITY" />
+			</species>
+			<species name="Reptile" description="Sentient upgright lizards" >
+				<origin name="Iota Draconis b"/>
+				<provides value="sentience"/>
+				<modifier name="Natural Armor" description="" value="1.0" target="ARMOR" type="MODIFIER" />
+				<modifier name="Limited Senses" description="" value="-1.0" target="PERCEPTION" type="ABILITY" />
+			</species>
+			<species name="Canine" description="Sentient upgright dogs" >
+				<origin name="Upsilon Andromedae"/>
+				<provides value="sentience"/>
+				<modifier name="Enhanced Hearing" description="" value="1.0" target="PERCEPTION" type="ABILITY" />
+			</species>
+			<species name="Feline" description="Sentient upgright cats" >
+				<origin name="Gliese 581 c"/>
+				<provides value="sentience"/>
+				<modifier name="Enhanced Reflexes" description="" value="1.0" target="SPEED" type="ABILITY" />
+			</species>
+	</speciess>
+
+</battle>

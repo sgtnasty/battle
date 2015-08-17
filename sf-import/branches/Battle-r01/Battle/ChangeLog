@@ -1,0 +1,136 @@
+2010-08-12  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core/BattleSession.cs:
+	  added basic races
+
+2010-08-09  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core/Skill.cs:
+	* Battle.csproj:
+	* Core/Power.cs:
+	* Core/Tagged.cs:
+	* Core/Species.cs:
+	* Core/Provider.cs:
+	* Core/Modifier.cs:
+	* Core/IRequires.cs:
+	* Core/HomeWorld.cs:
+	* Core/IProvides.cs:
+	* Core/BattleSession.cs:
+	* Core/PlayerCharacter.cs:
+	  removed Tagged interface, added Provider abstract base class
+
+2010-08-08  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core\Power.cs:
+	* Battle.csproj:
+	* Core\IProvides.cs:
+	* Core\IRequires.cs:
+	  working on provider requirerer interfaces
+
+2010-08-08  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core\Skill.cs:
+	* Gui\MainWindow.cs:
+	* Core\BattleSession.cs:
+	  working on skills
+
+2010-08-07  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* AssemblyInfo.cs:
+	  modified description
+
+	* Core\Tagged.cs:
+	  documentation added
+
+	* Core\BattleSession.cs:
+	  new Power implementation
+
+2010-08-07  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core\Skill.cs:
+	* Core\Power.cs:
+	* Core\Species.cs:
+	* Core\Ability.cs:
+	* Core\Modifier.cs:
+	* Core\HomeWorld.cs:
+	* Core\BattleSession.cs:
+	  fixed headers info
+
+2010-08-07  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core\Skill.cs:
+	* Core\Power.cs:
+	* Battle.csproj:
+	* Core\Tagged.cs:
+	* Core\Species.cs:
+	* Core\Modifier.cs:
+	* Core\HomeWorld.cs:
+	* Core\BattleSession.cs:
+	  encapsulated the Tagged class for re-use
+
+2010-08-07  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core\Power.cs:
+	* Core\HomeWorld.cs:
+	  describing members 
+
+2010-08-07  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core\Species.cs:
+	* Core\Modifier.cs:
+	* Core\HomeWorld.cs:
+	  added tags
+
+	* Core\Skill.cs:
+	  added tags and details
+
+2010-08-07  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Core\BattlePower.cs:
+	* Core\BattleSkill.cs:
+	* Core\BattleSpecies.cs:
+	* Core\BattleAbility.cs:
+	* Core\BattleModifier.cs:
+	* Core\BattleCharacter.cs: removing renamed files
+
+2010-08-07  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Core\Power.cs:
+	* Core\Skill.cs:
+	* Battle.csproj:
+	* Core\Species.cs:
+	* Core\Ability.cs:
+	* Core\Modifier.cs:
+	* Core\HomeWorld.cs:
+	* Core\PlayerCharacter.cs: removed prefix from class names
+
+2010-08-07  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Battle.csproj:
+	* Core\HomeWorld.cs:
+	* Core\BattleSpecies.cs:
+	* Core\BattleModifier.cs: added modifier Species and HomeWorld
+
+2010-08-07  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Core\BattleCharacter.cs: got all the abilities in order
+
+2010-08-07  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Battle.csproj:
+	* Core\BattleSkill.cs:
+	* Core\BattlePower.cs:
+	* Core\BattleAbility.cs:
+	* Core\BattleCharacter.cs:
+	* Core\CharacterAbilities.cs: setting up character definition
+
+2010-08-02  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Battle.csproj:
+	* Core/BattleSession.cs:
+	* Core/BattleCharacter.cs:
+	* Core/CharacterAbilities.cs: working on the player character
+	model
+
+2010-08-02  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+

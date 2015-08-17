@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<battle>
+	<players>
+		<player name="Vercingetorix">
+			<attributes>
+				<attribute name="Attack"  base="10"></attribute>
+				<attribute name="Defense" base="10"></attribute>
+				<attribute name="Armor"   base="10"></attribute>
+				<attribute name="Power"   base="10"></attribute>
+				<attribute name="Speed"   base="10"></attribute>
+				<attribute name="Range"   base="10"></attribute>
+			</attributes>
+		</player>
+		<player name="Ceasar">
+			<attributes>
+				<attribute name="Attack"  base="10"></attribute>
+				<attribute name="Defense" base="10"></attribute>
+				<attribute name="Armor"   base="10"></attribute>
+				<attribute name="Power"   base="10"></attribute>
+				<attribute name="Speed"   base="10"></attribute>
+				<attribute name="Range"   base="10"></attribute>
+			</attributes>
+		</player>
+	</players>
+</battle>

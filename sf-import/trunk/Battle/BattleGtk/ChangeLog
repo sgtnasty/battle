@@ -1,0 +1,9 @@
+2011-09-06  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* BattleGui.cs: putting quotes around name output
+
+2011-09-06  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* BattleGui.cs: basic engine and simple ai to close and attack
+	nearest enemy is in place and working
+

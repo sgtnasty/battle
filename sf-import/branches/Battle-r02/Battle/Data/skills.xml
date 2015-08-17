@@ -1,0 +1,35 @@
+<battle>
+
+	<skills>
+	
+		<!-- CHARISMA -->
+		<skill name="Persuasion" description="Skilled at convincing people to do something they dont want to do." 
+			cost="1" base="CHARISMA" />
+			
+		<!-- LOGIC -->
+		<skill name="Knowledge" description="Skilled at professional knowledge of a subject." cost="1" base="LOGIC" />
+		
+		<!-- PERCEPTION -->
+		<skill name="Stealth" description="Skilled at hiding, concealing and detecting." cost="1" base="PERCEPTION" />
+		
+		<!-- POWER -->		
+		<skill name="Channel" description="Skilled at channelling a power base" cost="1" base="POWER" />
+		
+		<!-- SPEED -->
+		<skill name="Acrobatics" description="Skilled at jumping, climbing etc." cost="1" base="SPEED" />
+		<skill name="Pilot" description="Skilled at driving conveyance" cost="2" base="SPEED"/>
+		<skill name="Aimed Combat" description="Skilled at combat with aimed weapons." cost="1" base="SPEED" />
+		
+		<!-- STAMINA -->
+		<skill name="Endurance" description="Skilled at tests of endurance." cost="1" base="STAMINA" />
+		
+		<!-- STRENGTH -->
+		<skill name="Combat" description="Skilled at unarmed combat." cost="1" base="STRENGTH" />
+		<skill name="Armed Combat" description="Skilled at armed combat" cost="1" base="STRENGTH" />
+		
+		<!-- WILLPOWER -->
+		<skill name="Intimidate" description="" cost="1" base="WILLPOWER" />
+		
+	</skills>
+
+</battle>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle", "Battle\Battle.csproj", "{7D2C5F54-0BC9-4C77-9D7B-3D8BE59C4293}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D2C5F54-0BC9-4C77-9D7B-3D8BE59C4293}.Debug|x86.ActiveCfg = Debug|x86
+		{7D2C5F54-0BC9-4C77-9D7B-3D8BE59C4293}.Debug|x86.Build.0 = Debug|x86
+		{7D2C5F54-0BC9-4C77-9D7B-3D8BE59C4293}.Release|x86.ActiveCfg = Release|x86
+		{7D2C5F54-0BC9-4C77-9D7B-3D8BE59C4293}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Battle\Battle.csproj
+		Policies = $0
+		$0.StandardHeader = $1
+		$1.inheritsSet = LGPLv3License
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+		$0.ChangeLogPolicy = $3
+		$3.UpdateMode = ProjectRoot
+		$3.VcsIntegration = RequireEntry
+		$3.MessageStyle = $4
+		$4.LineAlign = 0
+		$3.inheritsSet = Mono
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = null
+		$5.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $6
+		$6.inheritsSet = Mono
+		$6.inheritsScope = text/x-csharp
+		$6.scope = text/x-csharp
+		$0.TextStylePolicy = $7
+		$7.inheritsSet = null
+		$7.scope = application/glade+xml
+		$0.XmlFormattingPolicy = $8
+		$8.inheritsSet = null
+		$8.scope = application/glade+xml
+		$0.TextStylePolicy = $9
+		$9.inheritsSet = null
+		$9.scope = application/xml
+		$0.XmlFormattingPolicy = $10
+		$10.inheritsSet = Mono
+		$10.inheritsScope = application/xml
+		$10.scope = application/xml
+		$0.TextStylePolicy = $11
+		$11.inheritsSet = Mono
+		$11.inheritsScope = text/plain
+		$11.scope = application/x-dia-diagram
+	EndGlobalSection
+EndGlobal

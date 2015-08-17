@@ -1,0 +1,22 @@
+2011-07-31  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* wsh.ui:
+	* wsh.glade:
+	* Program.cs:
+	* ShellWindow.cs:
+	* GladeWindow.cs:
+	* WebShell.csproj: working with glade now
+
+2011-07-30  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Media/wsh.svg: no idea
+
+2011-07-30  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Media:
+	* Media/wsh.png:
+	* Media/wsh.svg:
+	* ShellWindow.cs:
+	* WebShell.csproj: added icon, about box and better error
+	dialog
+

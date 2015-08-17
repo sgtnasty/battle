@@ -1,0 +1,10 @@
+2011-08-12  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* MapWidget.cs: more playing with colors
+
+2011-08-12  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* MapWidget.cs: added mouse enter and leave notifications,
+	cairo drawing cant seem to handle any colors other than
+	primary when the linewidth is ~ 1 pixel ?!?!?
+

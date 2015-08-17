@@ -1,0 +1,86 @@
+2010-06-07  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Gui/MainWindow.cs: tried preferences dialog as a window
+
+	* Gui/PreferencesDialog.cs: added widgets to the proper
+	containers, Vbox and ActionArea
+
+2010-06-05  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Gui/PreferencesDialog.cs: working on gui
+
+2010-06-05  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Battle.csproj:
+	* Gui/MainWindow.cs:
+	* Gui/PreferencesDialog.cs: added skeleton for preferences
+
+2010-06-05  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Gui/MainWindow.cs: new main ui additions
+
+2010-05-28  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Battle.csproj:
+	* AssemblyInfo.cs: added assembly info, smal logo, vitals
+	controls
+
+	* Core/BattlelordsRace.cs: put in proper namespace
+
+	* Gui/BattlelordsCharacterWindow.cs: put it in proper
+	namespace
+
+	* Gui/BLLogo-small.jpg: new small logo for about box
+
+	* Gui/MainWindow.cs: added about box items
+
+	* Gui/NewCharacterWindow.cs: vitals almost worked out
+	added fillers for other notbook pages
+
+	* Gui/VitalsControl.cs: controls the set of vitals
+
+	* Gui/VitalWidget.cs: controls 1 vital
+
+2010-05-26  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Gui/NewCharacterWindow.cs: added word wrap to textviews
+
+2010-05-25  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Gui/NewCharacterWindow.cs: added new pages
+
+	* Gui/dice.png:
+	* Battle.csproj: added dice image
+
+2010-05-24  Ronaldo Nascimento  <ronaldo1@sourceforge.net>
+
+	* Gui/MainWindow.cs: many changes
+
+	* Gui/NewCharacterWindow.cs: bnased on the Gtk.Asisstant model
+
+	* Gui/LSIMMS.png: icon for window/app
+
+	* Gui/BattlelordsCharacterWindow.cs: work in progress
+
+	* Gui/MediaManager.cs: this helps load media files for app
+
+	* Gui/intro.html: intro html message for new char assistant
+
+	* Core: added session
+
+	* Core/BattlelordsSession.cs: session controls the model of
+	the app
+
+	* Core/BattlelordsRace.cs: basics of the race class
+
+	* Data: added races
+
+	* Data/DataManager.cs: this will manage importing and loading
+	xml data for the app
+
+	* Data/races.xml: the basic core rules races
+
+	* Battle.csproj: new sub components
+
+	* Program.cs: implementing session
+

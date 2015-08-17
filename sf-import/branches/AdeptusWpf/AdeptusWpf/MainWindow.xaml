@@ -1,0 +1,36 @@
+﻿<Window x:Class="AdeptusWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Adeptus" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="482" Width="803" Closing="Window_Closing">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/AdeptusWpf;component/Images/Warhammer-40000-Space-Marine-1918.jpg" Opacity="0.5" Stretch="UniformToFill"></ImageBrush>
+        </Grid.Background>
+        <ToolBarTray Name="toolBarTray1" VerticalAlignment="Top">
+            <ToolBar Name="toolBar1" HorizontalAlignment="Stretch">
+                <ToolBarPanel Name="toolBarPane1" Orientation="Horizontal">
+                    <Button Name="toolBarButton1" Click="toolBarButton1_Click" ToolTip="About Adeptus" Content="About" Margin="1"/>
+                    <Button Name="QuitButton" Content="Quit" Margin="1" Click="QuitButton_Click" />
+                </ToolBarPanel>
+            </ToolBar>
+        </ToolBarTray>
+        <Button Margin="0,0,214,152" VerticalAlignment="Center" Height="116" HorizontalAlignment="Center" Width="329" Click="Button_Click">
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="176"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="/AdeptusWpf;component/Images/deathwatch-logo.png" Margin="1"/>
+                        <TextBlock Grid.Column="1" Margin="3" Text="Deathwatch" VerticalAlignment="Center"/>
+                    </Grid>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+
+        <StatusBar Height="23" Name="statusBar1" VerticalAlignment="Bottom">
+            <StatusBarItem Name="statusBarItem1" Content="Ready"></StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

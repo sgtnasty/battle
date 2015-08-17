@@ -1,0 +1,9 @@
+2011-07-24  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Images:
+	* MediaManager.cs:
+	* AssemblyInfo.cs:
+	* BattleMedia.csproj:
+	* Images/BattleArt.xcf:
+	* Images/BattleArt.png: new media manager
+

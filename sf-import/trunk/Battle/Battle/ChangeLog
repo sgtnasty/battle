@@ -1,0 +1,20 @@
+2011-09-06  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* app.config: can run multiple battles now without error in
+	running out of potential targets thanks to Player.Reset
+
+2011-09-06  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* app.config:
+	* Battle.csproj: added windows version
+
+2011-09-06  Ronaldo Nascimento  <ronaldo.nascimento@va.gov>
+
+	* Program.cs: basic engine and simple ai to close and attack
+	nearest enemy is in place and working
+
+2011-09-05  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Program.cs: try to determine platform dynamically and load
+	appropriate gui client
+

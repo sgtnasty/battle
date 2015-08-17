@@ -1,0 +1,29 @@
+<battle>
+
+	<origins>
+	
+		<!-- taken from http://galaxymap.org -->
+		<!-- and http://en.wikipedia.org/wiki/Exoplanet#Notable_discoveries -->
+	
+		<origin name="Terra" description="Our blue planet.">
+			<provides value="Human race" />
+		</origin>
+		<origin name="Alpha Centauri" description="http://en.wikipedia.org/wiki/Alpha_Centauri">
+			<provides value="Cephalopod race" />
+		</origin>
+		<origin name="Gamma Cephei" description="http://en.wikipedia.org/wiki/Gamma_Cephei">
+			<provides value="Ursoid race" />
+		</origin>
+		<origin name="Upsilon Andromedae" description="http://en.wikipedia.org/wiki/Upsilon_Andromedae">
+			<provides value="Canine race" />
+		</origin>
+		<origin name="Iota Draconis b" description="http://en.wikipedia.org/wiki/Iota_Draconis_b">
+			<provides value="Reptile race" />
+		</origin>
+		<origin name="Gliese 581 c" description="http://en.wikipedia.org/wiki/Gliese_581_c">
+			<provides value="Feline race" />
+		</origin>
+		
+
+	</origins>
+</battle>

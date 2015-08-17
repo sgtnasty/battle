@@ -1,0 +1,22 @@
+<battle>
+
+	<powersources>
+		
+		<powersource name="Arcane" description="Draws power from the arcane energies that existed before time.">
+			<provides value="arcane base"/>
+		</powersource>
+		<powersource name="Psionics" description="Power of mental abilities">
+			<provides value="psionic base"/>
+		</powersource>
+		<powersource name="Primal" description="Draws power from primal instincts">
+			<provides value="primal base"/>
+		</powersource>
+		<powersource name="Martial" description="Draws power from sheer physical prowess">
+			<provides value="martial base"/>
+		</powersource>
+		<powersource name="Devine" description="Draws power from the old gods, no longer worshipped sleeping in oblivion">
+			<provides value="devine base"/>
+		</powersource>
+	</powersources>
+
+</battle>

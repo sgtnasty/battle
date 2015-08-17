@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="64px"
+   height="64px"
+   id="svg2996"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="wsh.png">
+  <defs
+     id="defs2998">
+    <linearGradient
+       id="linearGradient4021">
+      <stop
+         style="stop-color:#46a040;stop-opacity:1;"
+         offset="0"
+         id="stop4023" />
+      <stop
+         style="stop-color:#3d2c90;stop-opacity:0;"
+         offset="1"
+         id="stop4025" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3960">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3962" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3964" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3960"
+       id="linearGradient3966"
+       x1="11.242019"
+       y1="38.926619"
+       x2="32.467475"
+       y2="38.926619"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="12.65"
+     inkscape:cx="30.683979"
+     inkscape:cy="36.363636"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     showguides="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1123"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3008" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata3001">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:type="star"
+       style="fill:#ffcc00;marker-start:none;stroke:url(#linearGradient3966)"
+       id="path3010"
+       sodipodi:sides="11"
+       sodipodi:cx="22"
+       sodipodi:cy="39"
+       sodipodi:r1="10.77033"
+       sodipodi:r2="5.3851647"
+       sodipodi:arg1="1.9513027"
+       sodipodi:arg2="2.236902"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 18,49.000001 0.672351,-5.766001 -5.443774,2.015973 3.682954,-4.487168 -5.669512,-1.247183 5.524244,-1.78369 -4.095219,-4.114367 5.611626,1.486096 -1.220723,-5.675267 3.917356,4.284057 2.041343,-5.434312 L 24,34 l 4.655298,-3.468 -2.269587,5.343014 5.791228,-0.400623 -4.797949,3.267798 5.088485,2.793949 -5.802997,0.155079 2.770182,5.101462 -4.965633,-3.006876 -0.427633,5.789296 -2.551717,-5.214169 z" />
+    <rect
+       style="fill:#ff3900;stroke:#600000;stroke-opacity:1;stroke-linejoin:miter;stroke-width:0.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
+       id="rect3968"
+       width="25"
+       height="27"
+       x="20"
+       y="13" />
+    <g
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:FreeMono;-inkscape-font-specification:FreeMono"
+       id="text3970" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="32"
+       y="56"
+       id="text3975"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3977"
+         x="32"
+         y="56"
+         style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans">wsh</tspan></text>
+  </g>
+</svg>

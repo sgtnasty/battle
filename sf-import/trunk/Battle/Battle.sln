@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleEngine", "BattleEngine\BattleEngine.csproj", "{C3D0A491-1DFD-4F39-8548-8BA61880868A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleGtk", "BattleGtk\BattleGtk.csproj", "{6863E63E-8CDB-4372-82D8-CEF88766F7B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Battle", "Battle\Battle.csproj", "{D2EBC978-1CE6-43E8-8685-8C49801F701F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleWin", "BattleWin\BattleWin.csproj", "{8E34D4DD-A050-42C5-91B1-54607F5DFB14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6863E63E-8CDB-4372-82D8-CEF88766F7B1}.Debug|x86.ActiveCfg = Debug|x86
+		{6863E63E-8CDB-4372-82D8-CEF88766F7B1}.Debug|x86.Build.0 = Debug|x86
+		{6863E63E-8CDB-4372-82D8-CEF88766F7B1}.Release|x86.ActiveCfg = Release|x86
+		{6863E63E-8CDB-4372-82D8-CEF88766F7B1}.Release|x86.Build.0 = Release|x86
+		{8E34D4DD-A050-42C5-91B1-54607F5DFB14}.Debug|x86.ActiveCfg = Debug|x86
+		{8E34D4DD-A050-42C5-91B1-54607F5DFB14}.Debug|x86.Build.0 = Debug|x86
+		{8E34D4DD-A050-42C5-91B1-54607F5DFB14}.Release|x86.ActiveCfg = Release|x86
+		{8E34D4DD-A050-42C5-91B1-54607F5DFB14}.Release|x86.Build.0 = Release|x86
+		{C3D0A491-1DFD-4F39-8548-8BA61880868A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C3D0A491-1DFD-4F39-8548-8BA61880868A}.Debug|x86.Build.0 = Debug|Any CPU
+		{C3D0A491-1DFD-4F39-8548-8BA61880868A}.Release|x86.ActiveCfg = Release|Any CPU
+		{C3D0A491-1DFD-4F39-8548-8BA61880868A}.Release|x86.Build.0 = Release|Any CPU
+		{D2EBC978-1CE6-43E8-8685-8C49801F701F}.Debug|x86.ActiveCfg = Debug|x86
+		{D2EBC978-1CE6-43E8-8685-8C49801F701F}.Debug|x86.Build.0 = Debug|x86
+		{D2EBC978-1CE6-43E8-8685-8C49801F701F}.Release|x86.ActiveCfg = Release|x86
+		{D2EBC978-1CE6-43E8-8685-8C49801F701F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Battle\Battle.csproj
+	EndGlobalSection
+EndGlobal

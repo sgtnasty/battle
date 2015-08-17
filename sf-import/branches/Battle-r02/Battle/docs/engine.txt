@@ -1,0 +1,20 @@
+Battle Engine
+
+Definitions
+-----------
+Adventure
+	A series of encounters.
+Encounter
+	An event where PC's are tested (combat, stealth, persuasion, etc)
+
+example adventure pack:
+<adventure name="Ruins on the borderlands">
+	<intro>Long text here describing the players intro.</intro>
+	<encounters>
+		<encounter name="Mysterious Pass">
+			<task name="Deafeat monsters in pass">
+			</task>
+		</encounter>
+	</encounters>
+</adventure>
+

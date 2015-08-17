@@ -1,0 +1,42 @@
+2010-12-07  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Resources.resources: this will contain large strings for
+	information IF i can figure out how to format it and how to
+	read from it
+
+	* Gui/AdeptusWindow.cs: ahh return val how useful
+
+	* Gui/NewCharacterWindow.cs: working on assistant UI
+
+	* Adeptus.csproj: added Hyena and resources file
+
+2010-12-01  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Adeptus.csproj:
+	* Gui/AdeptusWindow.cs:
+	* Gui/EmperorVHorus.jpg: added new window image of horus v
+	emperor of mankind
+
+	* Gui/NewCharacterWindow.cs: new character assistant
+
+2010-12-01  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Core/Character.cs: filled out all characteristics loading
+
+	* Core/Characteristic.cs: removed advancement from constructor
+
+2010-12-01  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* AssemblyInfo.cs: added core assembly info
+
+	* Gui/AdeptusWindow.cs: click handlers for all toolbuttons, ui
+	enabling with ActiveCharacter method, about dialog with logo
+
+	* Adeptus.csproj:
+	* Gui/adeptus.jpeg: added logo
+
+2010-12-01  Ronaldo Nascimento  <ronaldo1@users.sourceforge.net>
+
+	* Program.cs:
+	* Gui\AdeptusWindow.cs: placing session into window gui
+
